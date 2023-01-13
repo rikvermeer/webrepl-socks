@@ -4,7 +4,7 @@ webrepl on socks, by openSSH on ngrok
 These are some of the great tools I've laid my eyes and fingers on, as a software engineer. This was the shortest piece of code I've ever written for such a (complex) result. I love protocols, streams and entanglement.
 
 
-```
+```python
 #!/usr/bin/env python3
 
 import socket
