@@ -4,6 +4,22 @@ webrepl on socks, by openSSH on ngrok
 These are some of the great tools I've laid my eyes and fingers on, as a software engineer. This was the shortest piece of code I've ever written for such a (complex) result. I love protocols, streams and entanglement.
 
 
+```
+#!/usr/bin/env python3
+
+import socket
+import socks
+
+from env import proxy_port
+
+socks.set_default_proxy(socks.SOCKS5, "localhost", proxy_port)
+socket.socket = socks.socksocket
+
+import webrepl.webrepl_cli
+webrepl_cli.main()
+```
+
+
 ### NGROK
 Punches through corporate networks while exposing you online. Get a fee API key and give youself remote access to your raspberry pi by reverse tunneling.
 
